@@ -1,0 +1,12 @@
+baseURL = 'https://calvernaz.github.io'
+languageCode = 'en-us'
+title = 'weirdloop'
+theme = 'holy'
+
+[menu]
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 10
