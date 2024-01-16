@@ -7,6 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>weirdloop</copyright>
+    <lastBuildDate>Tue, 16 Jan 2024 06:50:50 +0000</lastBuildDate>
     <atom:link href="https://calvernaz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Access Control Lists</title>
+      <link>https://calvernaz.github.io/tags/access-control-lists/</link>
+      <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/access-control-lists/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Client Authentication</title>
+      <link>https://calvernaz.github.io/tags/client-authentication/</link>
+      <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/client-authentication/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IoT Communication</title>
+      <link>https://calvernaz.github.io/tags/iot-communication/</link>
+      <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/iot-communication/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IoT Security</title>
+      <link>https://calvernaz.github.io/tags/iot-security/</link>
+      <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/iot-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mosquitto</title>
+      <link>https://calvernaz.github.io/tags/mosquitto/</link>
+      <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/mosquitto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MQTT</title>
+      <link>https://calvernaz.github.io/tags/mqtt/</link>
+      <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/mqtt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MQTT Broker</title>
+      <link>https://calvernaz.github.io/tags/mqtt-broker/</link>
+      <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/mqtt-broker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TLS Certificates</title>
+      <link>https://calvernaz.github.io/tags/tls-certificates/</link>
+      <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/tls-certificates/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSL/TLS</title>
+      <link>https://calvernaz.github.io/tags/ssl/tls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/ssl/tls/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

@@ -3,18 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://calvernaz.github.io/</loc>
-    <lastmod>2023-12-26T19:17:45+00:00</lastmod>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/access-control-lists/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/categories/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/client-authentication/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/posts/mqtt_tls_acls/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/iot-communication/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/iot-security/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/categories/iot-security/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/mosquitto/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/mqtt/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/mqtt-broker/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/posts/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/tls-certificates/</loc>
+    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
   </url><url>
     <loc>https://calvernaz.github.io/posts/hello/</loc>
     <lastmod>2023-12-26T19:17:45+00:00</lastmod>
   </url><url>
-    <loc>https://calvernaz.github.io/posts/</loc>
-    <lastmod>2023-12-26T19:17:45+00:00</lastmod>
-  </url><url>
     <loc>https://calvernaz.github.io/about/</loc>
   </url><url>
-    <loc>https://calvernaz.github.io/categories/</loc>
-  </url><url>
-    <loc>https://calvernaz.github.io/tags/</loc>
+    <loc>https://calvernaz.github.io/tags/ssl/tls/</loc>
   </url>
 </urlset>

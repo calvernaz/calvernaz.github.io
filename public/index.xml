@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>weirdloop</copyright>
-    <lastBuildDate>Tue, 26 Dec 2023 19:17:45 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jan 2024 06:50:50 +0000</lastBuildDate>
     <atom:link href="https://calvernaz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eclipse Mosquitto: Leveraging Certificates for Encryption, Identification, and ACLs</title>
+      <link>https://calvernaz.github.io/posts/mqtt_tls_acls/</link>
+      <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/posts/mqtt_tls_acls/</guid>
+      <description>This blog post delves into the sophisticated use of TLS certificates with Mosquitto, transcending their conventional role as encryption tools to serve as pivotal elements in client authentication and authorization.&#xA;We’ll explore how certificates, typically recognized for their role in securing communications, can be ingeniously repurposed for client identification through their Common Name (CN) attribute. This approach not only enhances the security posture of your MQTT ecosystem but also simplifies the authentication process.</description>
+    </item>
     <item>
       <title>Hello, Again!</title>
       <link>https://calvernaz.github.io/posts/hello/</link>

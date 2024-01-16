@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Eclipse Mosquitto: Leveraging Certificates for Encryption, Identification, and ACLs - weirdloop</title>
+
+    
+    
+    <meta name="description" content="This blog post delves into the sophisticated use of TLS certificates with Mosquitto, transcending their conventional role as encryption tools to serve as pivotal elements in client authentication and authorization.
+We’ll explore how certificates, typically recognized for their role in securing communications, can be ingeniously repurposed for client identification through their Common Name (CN) attribute. This approach not only enhances the security posture of your MQTT ecosystem but also simplifies the authentication process." />
+    <meta name="author" content="" />
+    
+
+    <link href="https://unpkg.com/@master/normal.css" rel="stylesheet">
+    <script src="https://unpkg.com/@master/style@1.5.0"></script>
+    <script src="https://unpkg.com/@master/styles@1.13.0"></script>
+    <script src="https://unpkg.com/master-styles-group"></script>
+    <script src="https://unpkg.com/themes.js"></script>
+    <script>window.themes = window.themes || new window.Themes()</script>
+
+    <style>
+        :root {
+            --font-sans: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        }
+    </style></head>
+<body class="bg:fade-84@dark font:fade-16@dark font:sans">
+    <nav class="w:full h:90 fixed bg:fade-84/.95@dark bg:white z:1000">
+    <div class="
+        h:full
+        w:full
+        max-w:1200
+        mx:auto
+        px:32
+        d:flex
+        align-items:center
+    ">
+        <div>
+            <a href="/" class="mr-3 font:extralight">
+              
+              weirdloop
+              
+            </a>
+        </div>
+
+        <div class="ml:auto">
+            
+            
+            
+            
+            <a class="
+                font:semibold
+                font:fade
+                font:fade-10:hover
+                font:fade-30.active
+                px:8
+                transition:150ms;ease-in
+                
+            " href="/about/" title="">About</a>
+            
+        </div>
+    </div>
+</nav>
+<div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word">
+        <div class="max-w:700 w:full box:content-box">
+<article class="box:border-box pt:32">
+    <header class="mb:32">
+        <div class="font:40 font:extrabold">Eclipse Mosquitto: Leveraging Certificates for Encryption, Identification, and ACLs</div>
+        <div class="mt:16 f:fade-60">
+            <time>Jan 16, 2024</time>
+            </div>
+    </header><div class="
+    _:where(a):hover{text-decoration-color:fade}
+    _:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
+    _:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-34/.1@dark}
+    _:where(code){font:90%;_v:middle}
+    _:where(code:not(.highlight_*,pre_*)){p:2;6;_r:4}
+    _:where(del){text-decoration:1;line-through;fade-68;_text-decoration-color:red-64@dark}
+    _:where(figcaption){text:14;_p:10;20;0;_width:fit;_mx:auto;_font:fade-56;_font:fade-57@dark}
+    _:where(h1){font:40;_font:extrabold}
+    _:where(h1,h2,h3)+:where(h1,h2,h3){mt:.5em}
+    _:where(h1,h2,h3,h4,h5,h6){mt:2em}
+    _:where(h2){mb:1em;_font:32}
+    _:where(h3){font:24}
+    _:where(h4){font:20}
+    _:where(h5){font:16}
+    _:where(h6){font:14}
+    _:where(li)::marker{font:fade-44;_font:fade-68@dark}
+    _:where(li){pl:.375em}
+    _:where(mark){text-decoration:1;underline;#fce016;_bg:transparent;_text-decoration-color:rgb(252;224;22/.5)@dark}
+    _:where(p,li){font:fade-76;_font:16;_line-height:1.65;_font:fade-34@dark}
+    _:where(p,pre,blockquote,figure,ul,ol,table){my:1.125em}
+    >:first-child{mt:0!}
+    _:where(pre){p:20;_r:8;_overflow:auto}
+    _:where(pre,code:not(.highlight_*)){bg:fade-2;_bg:fade-92!@dark}
+    _:where(strong,b,a,code:not(.highlight_*),mark,del){font:fade-92;_font:fade-12@dark}
+    _:where(table){width:full;_border-spacing:0}
+    _:where(td){v:baseline}
+    _:where(td,th):first-child{pl:0}
+    _:where(td,th):last-child{pr:0}
+    _:where(td,th){bb:1;solid;fade-92/.06;_p:6;_b:fade-4/.04@dark}
+    _:where(th){font:fade-78;_font:14;_text:left;_font:fade-12@dark}
+    _:where(th,p_code,li_code,a,mark){font:semibold;_font:medium@dark}
+    _:where(ul){list-style-type:disc}
+    _:where(ul,ol,blockquote){pl:1.5em}
+    _:where(video,img){max-width:full}
+    _:where(a,mark){text-underline-offset:3}
+    _:where(hr){h:2;_bg:fade-10;_bg:fade-70@dark;_my:3em}
+"><p>This blog post delves into the sophisticated use of TLS certificates with Mosquitto, transcending their conventional role as encryption tools to serve as pivotal elements in client authentication and authorization.</p>
+<p>We’ll explore how certificates, typically recognized for their role in securing communications, can be ingeniously repurposed for client identification through their Common Name (CN) attribute. This approach not only enhances the security posture of your MQTT ecosystem but also simplifies the authentication process. Furthermore, we will discuss how Access Control Lists (ACLs) can be seamlessly integrated with this identification mechanism, enabling precise control over who can publish or subscribe to specific topics. This synergy of encryption, identification, and access control not only fortifies the security of MQTT communications but also paves the way for more streamlined and manageable client permissions.</p>
+<p>To implement the security measures discussed, we need to configure Mosquitto appropriately. Let&rsquo;s break down the essential elements of the configuration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span># This line tells Mosquitto to listen for MQTT connections on port 8883
+</span></span><span style="display:flex;"><span># (the standard port for MQTT over TLS) and to accept connections from any IP address.
+</span></span><span style="display:flex;"><span>listener 8883 0.0.0.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># These specify the paths to the CA certificate, the server&#39;s certificate,
+</span></span><span style="display:flex;"><span># and the server&#39;s private key, respectively.
+</span></span><span style="display:flex;"><span>cafile /mosquitto/certs/ca.pem
+</span></span><span style="display:flex;"><span>certfile /mosquitto/certs/server.pem
+</span></span><span style="display:flex;"><span>keyfile /mosquitto/certs/server.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># By setting require_certificate to true, a client connecting to this listener must
+</span></span><span style="display:flex;"><span># provide a valid certificate in order for the network connection to proceed.
+</span></span><span style="display:flex;"><span># This allows access to the broker to be controlled outside of the mechanisms provided by MQTT.
+</span></span><span style="display:flex;"><span>require_certificate true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># If require_certificate is true, you may set use_identity_as_username to true
+</span></span><span style="display:flex;"><span># to use the CN value from the client certificate as a username.
+</span></span><span style="display:flex;"><span>use_identity_as_username true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># This points to the Access Control List (ACL) file, which contains rules defining the
+</span></span><span style="display:flex;"><span># permissions for different users, based on their usernames - in our case,
+</span></span><span style="display:flex;"><span># the identities derived from their certificates.
+</span></span><span style="display:flex;"><span>acl_file /mosquitto/acl/acl.acl
+</span></span></code></pre></div><h2 id="generating-certificates">Generating Certificates</h2>
+<p>To secure our Mosquitto setup, we&rsquo;ll generate our own root Certificate Authority (CA), server certificates, and client certificates.</p>
+<p><strong>Note</strong>: Use PEM format and <code>.pem</code> file extension, to avoid certificate validation issues.</p>
+<p>Here&rsquo;s how this is done:</p>
+<h3 id="root-certificate-authority-generation">Root Certificate Authority Generation</h3>
+<ol>
+<li><strong>Generate CA Private Key</strong>:
+This command generates a 2048-bit RSA private key for our CA and saves it to ca.key.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl genrsa -out ca.key <span style="color:#ae81ff">2048</span>
+</span></span></code></pre></div><ol start="2">
+<li><strong>Create CA Certificate</strong>:
+Here, we&rsquo;re creating a self-signed root CA certificate using the previously generated private key. The <code>-x509</code> flag indicates this is a self-signed certificate, <code>-sha256</code> specifies the use of SHA-256 hashing algorithm, and <code>-days</code> 1024 sets the certificate to be valid for 1024 days.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl req -x509 -new -nodes -key ca.key -sha256 -days <span style="color:#ae81ff">1024</span> -out ca.pem
+</span></span></code></pre></div><h3 id="server-certificates-generation">Server Certificates Generation</h3>
+<ol>
+<li><strong>Generate Server Private Key</strong>:
+This generates the server&rsquo;s 2048-bit RSA private key.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl genrsa -out server.key <span style="color:#ae81ff">2048</span>
+</span></span></code></pre></div><ol start="2">
+<li><strong>Create a Certificate Signing Request (CSR) for the Server</strong>:
+The CSR contains information like the organization&rsquo;s name and the server&rsquo;s domain name (Common Name). As a good practice,
+provide the domain name or a logical name to the &ldquo;Common Name&rdquo; section.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl req -new -key server.key -out server.csr
+</span></span></code></pre></div><ol start="3">
+<li><strong>Sign the Server CSR with the CA</strong>:
+This command uses the root CA to sign the server&rsquo;s CSR, generating the <code>server.pem</code> certificate valid for 500 days.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl x509 -req -in server.csr -CA ca.pem -CAkey ca.key -CAcreateserial -out server.pem -days <span style="color:#ae81ff">500</span> -sha256
+</span></span></code></pre></div><h2 id="client-certificates-generation">Client Certificates Generation</h2>
+<p>In scenarios where we have multiple devices communicating via MQTT, it&rsquo;s crucial to enforce fine-grained access control. A common approach is to generate unique client certificates for each device, using the device ID as part of the certificate&rsquo;s Common Name (CN), combined with the server configuration <code>use_identity_as_username true</code> (see above). This setup allows us to restrict each device to specific topics in the Mosquitto broker using ACLs.</p>
+<ol>
+<li><strong>Generate Device Private Key</strong>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl genrsa -out Device123.key <span style="color:#ae81ff">2048</span>
+</span></span></code></pre></div><ol start="2">
+<li><strong>Create a CSR for the Device</strong>:
+When prompted for the &lsquo;Common Name&rsquo;, use the device&rsquo;s unique identifier (e.g., Device123).</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl req -new -key Device123.key -out Device123.csr
+</span></span></code></pre></div><ol start="3">
+<li><strong>Sign the Device CSR with the CA</strong>:
+Repeat these steps for each device, replacing Device123 with the respective device ID.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl x509 -req -in Device123.csr -CA ca.pem -CAkey ca.key -CAcreateserial -out Device123.pem -days <span style="color:#ae81ff">500</span> -sha256
+</span></span></code></pre></div><h2 id="configuring-acl-for-device-specific-topic-access">Configuring ACL for Device-Specific Topic Access</h2>
+<p>With the client certificates in place, we can now configure Mosquitto&rsquo;s ACL file to restrict access based on the device ID. Here&rsquo;s how to set up the ACL:</p>
+<ol>
+<li><strong>Edit the ACL File (/mosquitto/acl/acl.acl)</strong>:
+In this configuration, <code>%u</code> will be replaced by the username of the connecting client (i.e., the device ID as per the client certificate&rsquo;s CN). For instance, if a device with the CN <code>Device123</code> connects, <code>%u</code> will be replaced with <code>Device123</code>, effectively allowing the device to access topics under <code>/device/Device123/#</code>.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>user Device123
+</span></span><span style="display:flex;"><span>topic readwrite /device/%u/#
+</span></span></code></pre></div><p>By leveraging dynamic placeholders like <code>%u</code> in our ACL file, we achieve a flexible yet secure way of managing topic access across a multitude of devices. This method not only reinforces the security of our MQTT communications but also introduces scalability and ease of management in complex IoT environments
+By using the device&rsquo;s ID in both the certificate and the ACL configuration, we create a secure and straightforward way to ensure that each device can only access its designated topics. This method enhances the security and integrity of our MQTT communication.</p>
+<h2 id="final-steps-verifying-your-secure-mqtt-setup">Final Steps: Verifying Your Secure MQTT Setup</h2>
+<p>After configuring Mosquitto and generating the necessary certificates, it&rsquo;s important to verify that the setup works as expected. Let&rsquo;s go through a couple of verification steps to ensure that our MQTT environment is secure and functional.</p>
+<h3 id="verifying-tls-communication-with-openssl">Verifying TLS Communication with OpenSSL</h3>
+<p>To test the TLS handshake and verify that the server is correctly using the provided certificates, we can use the <code>openssl s_client</code> command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl s_client -connect &lt;server-address&gt;:8883 -CAfile ca.pem -cert Device123.pem -key Device123.key
+</span></span></code></pre></div><p>Look for messages indicating a successful TLS handshake. This will confirm that the client can establish a secure connection with the MQTT broker using the provided certificates.</p>
+<h2 id="testing-mqtt-connection-with-mosquitto-client">Testing MQTT Connection with Mosquitto Client</h2>
+<p>Finally, let&rsquo;s test the MQTT publish functionality using <code>mosquitto_pub</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mosquitto_pub -h &lt;server-address&gt; -p <span style="color:#ae81ff">8883</span> --cafile ca.pem --cert Device123.pem --key Device123.key -t /device/Device123/ -m <span style="color:#e6db74">&#34;22.5&#34;</span> --insecure -d
+</span></span></code></pre></div><p>Successful execution of this command will publish the message &ldquo;22.5&rdquo; to the specified topic, demonstrating that your MQTT client can securely communicate with the broker using TLS.</p>
+<h2 id="wrapping-up">Wrapping Up</h2>
+<p>By following the steps in this guide, you&rsquo;ve set
+up a secure MQTT environment using Mosquitto, where communication is encrypted, and clients are authenticated and authorized using TLS certificates. This approach not only enhances the security of your MQTT communication but also provides a scalable way to manage client access through ACLs.</p>
+<p>Remember, regular maintenance and updates to your Mosquitto setup and certificates are essential to keep your IoT environment secure.</p>
+</div></article>
+<footer class="py:24">
+    <div class="f:fade-30 f:14 mb:8"></div>
+</footer>
+</div>
+    </div>
+</body>
+
+</html>
