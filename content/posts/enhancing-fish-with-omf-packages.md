@@ -1,7 +1,7 @@
 ---
 title: "Fish Shell: Creating and Sharing Packages with Oh My Fish"
 date: 2024-01-20T06:50:50Z
-draft: true
+draft: false
 description: "Dive into the world of Fish shell, a smart and user-friendly command line interface. Learn how to enhance your Fish experience by creating and sharing your own packages using the Oh My Fish (OMF) framework."
 tags: ["Fish Shell", "Oh My Fish", "Shell Scripting", "Package Management", "Command Line"]
 categories: ["Development Tools", "Productivity"]
