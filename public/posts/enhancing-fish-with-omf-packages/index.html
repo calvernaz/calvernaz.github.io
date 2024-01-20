@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Fish Shell: Creating and Sharing Packages with Oh My Fish - weirdloop</title>
+
+    
+    
+    <meta name="description" content="One of the aspects I personally find most compelling about fish shell is its scripting ease. Unlike traditional shells, fish&rsquo;s scripting language is straightforward, clean, and comes with features that encourage writing and maintaining scripts effortlessly. From its intelligent autosuggestions to the robust error handling, fish shell stands out as a powerful tool in the developer&rsquo;s toolkit.
+With the integration of the Oh My Fish (OMF) framework, users can further extend the shell&rsquo;s functionality." />
+    <meta name="author" content="" />
+    
+
+    <link href="https://unpkg.com/@master/normal.css" rel="stylesheet">
+    <script src="https://unpkg.com/@master/style@1.5.0"></script>
+    <script src="https://unpkg.com/@master/styles@1.13.0"></script>
+    <script src="https://unpkg.com/master-styles-group"></script>
+    <script src="https://unpkg.com/themes.js"></script>
+    <script>window.themes = window.themes || new window.Themes()</script>
+
+    <style>
+        :root {
+            --font-sans: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        }
+    </style></head>
+<body class="bg:fade-84@dark font:fade-16@dark font:sans">
+    <nav class="w:full h:90 fixed bg:fade-84/.95@dark bg:white z:1000">
+    <div class="
+        h:full
+        w:full
+        max-w:1200
+        mx:auto
+        px:32
+        d:flex
+        align-items:center
+    ">
+        <div>
+            <a href="/" class="mr-3 font:extralight">
+              
+              weirdloop
+              
+            </a>
+        </div>
+
+        <div class="ml:auto">
+            
+            
+            
+            
+            <a class="
+                font:semibold
+                font:fade
+                font:fade-10:hover
+                font:fade-30.active
+                px:8
+                transition:150ms;ease-in
+                
+            " href="/about/" title="">About</a>
+            
+        </div>
+    </div>
+</nav>
+<div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word">
+        <div class="max-w:700 w:full box:content-box">
+<article class="box:border-box pt:32">
+    <header class="mb:32">
+        <div class="font:40 font:extrabold">Fish Shell: Creating and Sharing Packages with Oh My Fish</div>
+        <div class="mt:16 f:fade-60">
+            <time>Jan 20, 2024</time>
+            </div>
+    </header><div class="
+    _:where(a):hover{text-decoration-color:fade}
+    _:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
+    _:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-34/.1@dark}
+    _:where(code){font:90%;_v:middle}
+    _:where(code:not(.highlight_*,pre_*)){p:2;6;_r:4}
+    _:where(del){text-decoration:1;line-through;fade-68;_text-decoration-color:red-64@dark}
+    _:where(figcaption){text:14;_p:10;20;0;_width:fit;_mx:auto;_font:fade-56;_font:fade-57@dark}
+    _:where(h1){font:40;_font:extrabold}
+    _:where(h1,h2,h3)+:where(h1,h2,h3){mt:.5em}
+    _:where(h1,h2,h3,h4,h5,h6){mt:2em}
+    _:where(h2){mb:1em;_font:32}
+    _:where(h3){font:24}
+    _:where(h4){font:20}
+    _:where(h5){font:16}
+    _:where(h6){font:14}
+    _:where(li)::marker{font:fade-44;_font:fade-68@dark}
+    _:where(li){pl:.375em}
+    _:where(mark){text-decoration:1;underline;#fce016;_bg:transparent;_text-decoration-color:rgb(252;224;22/.5)@dark}
+    _:where(p,li){font:fade-76;_font:16;_line-height:1.65;_font:fade-34@dark}
+    _:where(p,pre,blockquote,figure,ul,ol,table){my:1.125em}
+    >:first-child{mt:0!}
+    _:where(pre){p:20;_r:8;_overflow:auto}
+    _:where(pre,code:not(.highlight_*)){bg:fade-2;_bg:fade-92!@dark}
+    _:where(strong,b,a,code:not(.highlight_*),mark,del){font:fade-92;_font:fade-12@dark}
+    _:where(table){width:full;_border-spacing:0}
+    _:where(td){v:baseline}
+    _:where(td,th):first-child{pl:0}
+    _:where(td,th):last-child{pr:0}
+    _:where(td,th){bb:1;solid;fade-92/.06;_p:6;_b:fade-4/.04@dark}
+    _:where(th){font:fade-78;_font:14;_text:left;_font:fade-12@dark}
+    _:where(th,p_code,li_code,a,mark){font:semibold;_font:medium@dark}
+    _:where(ul){list-style-type:disc}
+    _:where(ul,ol,blockquote){pl:1.5em}
+    _:where(video,img){max-width:full}
+    _:where(a,mark){text-underline-offset:3}
+    _:where(hr){h:2;_bg:fade-10;_bg:fade-70@dark;_my:3em}
+"><p>One of the aspects I personally find most compelling about <a href="https://fishshell.com">fish shell</a> is its scripting ease. Unlike traditional shells, fish&rsquo;s scripting language is straightforward, clean, and comes with features that encourage writing and maintaining scripts effortlessly. From its intelligent autosuggestions to the robust error handling, <a href="https://fishshell.com">fish shell</a> stands out as a powerful tool in the developer&rsquo;s toolkit.</p>
+<p>With the integration of the <a href="https://github.com/oh-my-fish/oh-my-fish">Oh My Fish (OMF) framework</a>, users can further extend the shell&rsquo;s functionality. <a href="https://github.com/oh-my-fish/oh-my-fish">OMF</a> offers a package management system, allowing users to install new packages, themes, and utilities, thus customizing their shell environment to their liking.</p>
+<p>In this post, we will delve into the process of creating and sharing <a href="https://fishshell.com">fish</a> packages using <a href="https://github.com/oh-my-fish/oh-my-fish">Oh My Fish</a>, exploring how this powerful combination can elevate your command-line experience to new heights.</p>
+<h2 id="setting-up-oh-my-fish-omf">Setting Up Oh My Fish (OMF)</h2>
+<p>Before we dive into the creation and sharing of packages, it&rsquo;s essential to have Oh-My-Fish (omf) installed in your <a href="https://fishshell.com">fish</a> environment. <code>omf</code> is a package manager for the Fish shell, offering an extensive ecosystem of themes, packages, and a framework for advanced customization. <a href="https://github.com/oh-my-fish/oh-my-fish#installation">Follow the installation guide here</a>.</p>
+<p>After installation, you can verify that <code>omf</code> is correctly installed by running:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>omf --version
+</span></span></code></pre></div><p>Next step, check your existing repositories:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>omf repositories
+</span></span></code></pre></div><p>it should output something like <code>https://github.com/oh-my-fish/packages-main master</code></p>
+<p>Also, check the packages installed - if it&rsquo;s a fresh installation you won&rsquo;t have much 😊</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>omf list
+</span></span></code></pre></div><p>Last but not least, check where all the <code>omf</code> configuration lives, the environment variable <code>OMF_CONFIG</code> will point to
+the configured directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>env | grep OMF_CONFIG
+</span></span></code></pre></div><h2 id="creating-a-fish-package">Creating a Fish Package</h2>
+<p>In the world of <code>omf</code>, what we generally refer to as a package is known as a plugin. These plugins are essentially extensions or add-ons that enhance the functionality of the Fish shell, ranging from simple utility functions to complex integrations with external tools.</p>
+<h3 id="understanding-the-omf-directory-structure">Understanding the OMF Directory Structure</h3>
+<p>Before we move into the practical steps to create a plugin, it&rsquo;s essential to understand the directory structure that it uses. This knowledge will help you manage and navigate your fish shell environment more effectively. Let&rsquo;s clarify the roles of two key directories: <code>OMF_CONFIG</code> and <code>~/.local/share/omf</code>.</p>
+<h4 id="1-the-omf_config-directory">1. The <code>OMF_CONFIG</code> Directory</h4>
+<ul>
+<li>
+<p><strong>Location and Purpose</strong>: Typically found at <code>~/.config/omf</code>, this directory is the heart of your user-specific Oh My Fish configuration. It&rsquo;s where your personalized settings, such as custom themes or packages, reside.</p>
+</li>
+<li>
+<p><strong>User Customization and Flexibility</strong>: This is your playground for customization. Whether you&rsquo;re adding unique plugins or tweaking themes, your changes are encapsulated here, keeping your individual setup neatly organized.</p>
+</li>
+<li>
+<p><strong>Portability and Backup</strong>: Given its nature, the <code>OMF_CONFIG</code> directory is perfect for backing up or transferring. Copying this directory allows you to replicate your Oh My Fish setup on another machine seamlessly.</p>
+</li>
+</ul>
+<h4 id="2-the-localshareomf-directory">2. The <code>~/.local/share/omf</code> Directory</h4>
+<ul>
+<li>
+<p><strong>Core Installation</strong>: This directory houses the core of your Oh My Fish installation. It includes the package manager and the default sets of packages and themes provided by OMF.</p>
+</li>
+<li>
+<p><strong>Package Storage</strong>: Beyond the package manager, this directory stores the installed packages and themes. Unless overridden by user-specific configurations in <code>OMF_CONFIG</code>, the content here forms the base of your Oh My Fish environment.</p>
+</li>
+<li>
+<p><strong>Separation of Concerns</strong>: This directory ensures a clear distinction between the OMF base installation (shared and consistent across users) and user-specific configurations (personalized and varied). Such separation is key for a clean and stable setup.</p>
+</li>
+</ul>
+<h4 id="understanding-omf-plugins">Understanding OMF Plugins</h4>
+<p>Now that we&rsquo;ve familiarized ourselves with the foundational directory structure of OMF, it&rsquo;s time to delve deeper into the anatomy of an OMF plugin.</p>
+<ul>
+<li><strong>Plugin Directory</strong>: Each plugin resides in its own directory within the <code>~/.local/share/omf/pkg/</code> directory.</li>
+<li><strong>Plugin Files</strong>: A typical plugin may contain several files, but there are a few key ones:
+<ul>
+<li><code>init.fish</code>: The initialization script that&rsquo;s run when the plugin is loaded.</li>
+<li><code>uninstall.fish</code>: (Optional) A script that&rsquo;s run when the plugin is removed.</li>
+<li><code>functions/</code>: A directory containing Fish functions that the plugin provides.</li>
+<li><code>completions/</code>: A directory containing completion definitions for the commands provided by the plugin.</li>
+</ul>
+</li>
+</ul>
+<h3 id="steps-to-create-an-omf-plugin">Steps to Create an OMF Plugin</h3>
+<p>The name of the directory should match your plugin&rsquo;s name. The plugin we will build, as an example, is called <code>env_loader</code>, that automatically loads environment variables from the <code>.env</code> file when navigating to the directory.</p>
+<ol>
+<li>Creating the plugin:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>omf new plugin env_loader
+</span></span></code></pre></div><p>This should result on the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span> create  completions/env_loader.fish
+</span></span><span style="display:flex;"><span> create  functions/env_loader.fish
+</span></span><span style="display:flex;"><span> create  init.fish
+</span></span><span style="display:flex;"><span> create  LICENSE
+</span></span><span style="display:flex;"><span> create  README.md
+</span></span><span style="display:flex;"><span> create  uninstall.fish
+</span></span></code></pre></div><p>The first thing I do is initialize a git repository from it, but you can also copy this folder and move it to your code directory, because we will create a repository for it and install it from the repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git init .
+</span></span><span style="display:flex;"><span>git commit -am <span style="color:#e6db74">&#34;inital import&#34;</span>
+</span></span></code></pre></div><ol start="2">
+<li>Write the <code>init.sh</code> script</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># reacts to directory changes</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> load_env --on-variable PWD
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Call the load_env function from load_env.fish</span>
+</span></span><span style="display:flex;"><span>    env_loader
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Trigger load_env on shell start</span>
+</span></span><span style="display:flex;"><span>emit load_env
+</span></span></code></pre></div><ol start="3">
+<li>Write the <code>env_loader</code> function on the <code>functions/env_loader.fish</code> file:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> env_loader
+</span></span><span style="display:flex;"><span>    set -l env_file <span style="color:#e6db74">&#34;</span>$PWD<span style="color:#e6db74">/.env&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> test -f $env_file
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> line in <span style="color:#f92672">(</span>cat $env_file<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            set -gx <span style="color:#f92672">(</span>string split <span style="color:#e6db74">&#34;=&#34;</span> $line<span style="color:#f92672">)[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>string split <span style="color:#e6db74">&#34;=&#34;</span> $line<span style="color:#f92672">)[</span>2<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        end
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>Before distributing your plugin, it&rsquo;s indeed a good practice to thoroughly test it. Sourcing <code>init.fish</code> and the functions from <code>functions/env_loader.fish</code> will help you ensure that everything is working as expected.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>source init.fish
+</span></span><span style="display:flex;"><span>source functions/env_loader.fish
+</span></span></code></pre></div><ol start="4">
+<li>Test it!</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mkdir tmp; echo <span style="color:#e6db74">&#34;FOO=BAR&#34;</span> &gt; tmp/.env
+</span></span></code></pre></div><p>Navigate into <code>tmp/</code> and check the loaded environment variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd tmp; env | grep FOO
+</span></span></code></pre></div><p>Finally, commit the final version and make it available on github, for example <code>https://github.com/username/env_loader</code>.</p>
+<h2 id="sharing-your-package-with-the-community">Sharing Your Package with the Community</h2>
+<p>Here are two primary ways to share your Fish shell, <strong>submitting to the official Oh My Fish registry</strong> or <strong>creating our own package repository</strong>. We will explore the latter.</p>
+<ol>
+<li>
+<p><strong>Initialize a New Repository</strong>:
+Create a new Git repository on GitHub for example and called it <code>fish-packages</code></p>
+</li>
+<li>
+<p><strong>Organize Your Packages</strong>:
+Create a directory inside	<code>fish-packages</code> called <code>packages</code>. Inside the <code>packages</code> directory create a file called <code>env_loader</code> with the following content:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>type <span style="color:#f92672">=</span> plugin
+</span></span><span style="display:flex;"><span>repository <span style="color:#f92672">=</span> https://github.com/username/env_loader
+</span></span><span style="display:flex;"><span>description <span style="color:#f92672">=</span> Package provides a way to automatically load environment variables from .env
+</span></span></code></pre></div><p>Should end up with file tree like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├── README.md
+</span></span><span style="display:flex;"><span>└── packages
+</span></span><span style="display:flex;"><span>    └── env_loader
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> directory, <span style="color:#ae81ff">2</span> files
+</span></span></code></pre></div><ol start="3">
+<li><strong>Inform Your Users</strong>:
+Update your <code>README.md</code> to include instructions on how users can add your repository as a custom repository to their Oh My Fish installation:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>omf repository add &lt;your_repository_url&gt;
+</span></span></code></pre></div><p>List the repositories, notice we have our own repository now:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>https://github.com/oh-my-fish/packages-main master
+</span></span><span style="display:flex;"><span>https://github.com/username/fish-packages master
+</span></span></code></pre></div><p>Finally, install the new plugin:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>omf update; omf install env_loader
+</span></span></code></pre></div><p>The installation will install the plugin on <code>~/.local/share/omf/pkg</code> and will be ready to use!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Dive in, start creating, and become an active participant in the ever-growing ecosystem of the Fish shell and Oh My Fish. Happy scripting!</p>
+</div></article>
+<footer class="py:24">
+    <div class="f:fade-30 f:14 mb:8"></div>
+</footer>
+</div>
+    </div>
+</body>
+
+</html>

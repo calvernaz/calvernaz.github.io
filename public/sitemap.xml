@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://calvernaz.github.io/</loc>
-    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
-  </url><url>
-    <loc>https://calvernaz.github.io/tags/access-control-lists/</loc>
-    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
   </url><url>
     <loc>https://calvernaz.github.io/categories/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/command-line/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/categories/development-tools/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/fish-shell/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/posts/enhancing-fish-with-omf-packages/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/oh-my-fish/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/package-management/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/posts/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/categories/productivity/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/shell-scripting/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/</loc>
+    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/tags/access-control-lists/</loc>
     <lastmod>2024-01-16T06:50:50+00:00</lastmod>
   </url><url>
     <loc>https://calvernaz.github.io/tags/client-authentication/</loc>
@@ -33,12 +63,6 @@
     <lastmod>2024-01-16T06:50:50+00:00</lastmod>
   </url><url>
     <loc>https://calvernaz.github.io/tags/mqtt-broker/</loc>
-    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
-  </url><url>
-    <loc>https://calvernaz.github.io/posts/</loc>
-    <lastmod>2024-01-16T06:50:50+00:00</lastmod>
-  </url><url>
-    <loc>https://calvernaz.github.io/tags/</loc>
     <lastmod>2024-01-16T06:50:50+00:00</lastmod>
   </url><url>
     <loc>https://calvernaz.github.io/tags/tls-certificates/</loc>

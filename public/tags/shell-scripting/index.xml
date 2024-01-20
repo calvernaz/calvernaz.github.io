@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell Scripting on weirdloop</title>
+    <link>https://calvernaz.github.io/tags/shell-scripting/</link>
+    <description>Recent content in Shell Scripting on weirdloop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>weirdloop</copyright>
+    <lastBuildDate>Sat, 20 Jan 2024 06:50:50 +0000</lastBuildDate>
+    <atom:link href="https://calvernaz.github.io/tags/shell-scripting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fish Shell: Creating and Sharing Packages with Oh My Fish</title>
+      <link>https://calvernaz.github.io/posts/enhancing-fish-with-omf-packages/</link>
+      <pubDate>Sat, 20 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/posts/enhancing-fish-with-omf-packages/</guid>
+      <description>One of the aspects I personally find most compelling about fish shell is its scripting ease. Unlike traditional shells, fish&amp;rsquo;s scripting language is straightforward, clean, and comes with features that encourage writing and maintaining scripts effortlessly. From its intelligent autosuggestions to the robust error handling, fish shell stands out as a powerful tool in the developer&amp;rsquo;s toolkit.&#xA;With the integration of the Oh My Fish (OMF) framework, users can further extend the shell&amp;rsquo;s functionality.</description>
+    </item>
+  </channel>
+</rss>

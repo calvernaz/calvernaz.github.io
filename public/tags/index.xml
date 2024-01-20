@@ -7,8 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>weirdloop</copyright>
-    <lastBuildDate>Tue, 16 Jan 2024 06:50:50 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jan 2024 06:50:50 +0000</lastBuildDate>
     <atom:link href="https://calvernaz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Command Line</title>
+      <link>https://calvernaz.github.io/tags/command-line/</link>
+      <pubDate>Sat, 20 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/command-line/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fish Shell</title>
+      <link>https://calvernaz.github.io/tags/fish-shell/</link>
+      <pubDate>Sat, 20 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/fish-shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oh My Fish</title>
+      <link>https://calvernaz.github.io/tags/oh-my-fish/</link>
+      <pubDate>Sat, 20 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/oh-my-fish/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Package Management</title>
+      <link>https://calvernaz.github.io/tags/package-management/</link>
+      <pubDate>Sat, 20 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/package-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell Scripting</title>
+      <link>https://calvernaz.github.io/tags/shell-scripting/</link>
+      <pubDate>Sat, 20 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/shell-scripting/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Access Control Lists</title>
       <link>https://calvernaz.github.io/tags/access-control-lists/</link>
