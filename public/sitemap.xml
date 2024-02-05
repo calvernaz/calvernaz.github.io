@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://calvernaz.github.io/</loc>
-    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
+    <lastmod>2024-02-04T23:25:37+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/posts/doc_docker/</loc>
+    <lastmod>2024-02-04T23:25:37+00:00</lastmod>
+  </url><url>
+    <loc>https://calvernaz.github.io/posts/</loc>
+    <lastmod>2024-02-04T23:25:37+00:00</lastmod>
   </url><url>
     <loc>https://calvernaz.github.io/categories/</loc>
     <lastmod>2024-01-20T06:50:50+00:00</lastmod>
@@ -24,9 +30,6 @@
     <lastmod>2024-01-20T06:50:50+00:00</lastmod>
   </url><url>
     <loc>https://calvernaz.github.io/tags/package-management/</loc>
-    <lastmod>2024-01-20T06:50:50+00:00</lastmod>
-  </url><url>
-    <loc>https://calvernaz.github.io/posts/</loc>
     <lastmod>2024-01-20T06:50:50+00:00</lastmod>
   </url><url>
     <loc>https://calvernaz.github.io/categories/productivity/</loc>
