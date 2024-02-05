@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data-Only Containers on weirdloop</title>
+    <link>https://calvernaz.github.io/tags/data-only-containers/</link>
+    <description>Recent content in Data-Only Containers on weirdloop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>weirdloop</copyright>
+    <lastBuildDate>Mon, 05 Feb 2024 08:26:47 +0000</lastBuildDate>
+    <atom:link href="https://calvernaz.github.io/tags/data-only-containers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data-Only Containers in Docker: Flexibility in Data Management</title>
+      <link>https://calvernaz.github.io/posts/data-only-containers-data-management/</link>
+      <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
+      <guid>https://calvernaz.github.io/posts/data-only-containers-data-management/</guid>
+      <description>We will explore how DOCs (data-only containers), as a deliberate and thought-out approach, for managing data in Docker. DOCs are particularly interesting in scenarios requiring the distribution of static, unmodifiable data – such as packaged website content, tenanted configuration files, or standardized test datasets.&#xA;DOCs offers a reliable and efficient method to manage data separation and portability in Docker to deploy immutable data resources across different stages of development since they can be versioned, shared, and reused across different environments.</description>
+    </item>
+  </channel>
+</rss>

@@ -7,8 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>weirdloop</copyright>
-    <lastBuildDate>Sat, 20 Jan 2024 06:50:50 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Feb 2024 08:26:47 +0000</lastBuildDate>
     <atom:link href="https://calvernaz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Containerization</title>
+      <link>https://calvernaz.github.io/tags/containerization/</link>
+      <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/containerization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Management</title>
+      <link>https://calvernaz.github.io/tags/data-management/</link>
+      <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/data-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Portability</title>
+      <link>https://calvernaz.github.io/tags/data-portability/</link>
+      <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/data-portability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data-Only Containers</title>
+      <link>https://calvernaz.github.io/tags/data-only-containers/</link>
+      <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/data-only-containers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://calvernaz.github.io/tags/devops/</link>
+      <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed Systems</title>
+      <link>https://calvernaz.github.io/tags/distributed-systems/</link>
+      <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://calvernaz.github.io/tags/docker/</link>
+      <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Engineering</title>
+      <link>https://calvernaz.github.io/tags/software-engineering/</link>
+      <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/software-engineering/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Command Line</title>
       <link>https://calvernaz.github.io/tags/command-line/</link>
