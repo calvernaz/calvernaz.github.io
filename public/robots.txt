@@ -1,0 +1,11 @@
+# robots.txt for https://calvernaz.github.io/
+
+# Allow all bots to access the entire site
+User-agent: *
+
+# Disallow bots from accessing specific directories
+# Disallow: /private/
+# Disallow: /tmp/
+
+# Sitemap: specify the path to your sitemap (if you have one)
+# Sitemap: https://www.weirdloop.com/sitemap.xml

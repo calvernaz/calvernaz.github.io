@@ -175,7 +175,7 @@ Anyway, so far so good, this is pretty much how data-only containers work, and i
 These secrets are critical for the operation of each tenant&rsquo;s instance of the application and must be securely managed to prevent unauthorized access.</p>
 <p>Here is a simple illustration of how a Kubernetes pod can be configured with a secrets mount volume, under <code>etc/secrets/</code>
 there are tenant-specific secrets that are accessible to the application container.</p>
-<p><img src="k8s-secrets.png" alt="Kubernetes Pod with Secrets Volume" title="=x300"></p>
+<p><img src="/static/k8s-secrets.png" alt="Kubernetes Pod with Secrets Volume" title="=x300"></p>
 <h3 id="the-problem">The Problem</h3>
 <p>The problem arises when we need to have a consistent application approach across the different runtimes,
 docker in development and kubernetes, for example, in production.</p>
