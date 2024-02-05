@@ -106,7 +106,7 @@ These secrets are critical for the operation of each tenant's instance of the ap
 Here is a simple illustration of how a Kubernetes pod can be configured with a secrets mount volume, under `etc/secrets/`
 there are tenant-specific secrets that are accessible to the application container.
 
-![Kubernetes Pod with Secrets Volume](k8s-secrets.png "=x300")
+![Kubernetes Pod with Secrets Volume](/static/k8s-secrets.png "=x300")
 
 ### The Problem
 The problem arises when we need to have a consistent application approach across the different runtimes,
