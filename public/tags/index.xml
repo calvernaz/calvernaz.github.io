@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on weirdloop</title>
+    <title>Tags on Weirdloop</title>
     <link>https://calvernaz.github.io/tags/</link>
-    <description>Recent content in Tags on weirdloop</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Tags on Weirdloop</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>weirdloop</copyright>
     <lastBuildDate>Mon, 05 Feb 2024 08:26:47 +0000</lastBuildDate>
@@ -150,17 +150,17 @@
       <description></description>
     </item>
     <item>
+      <title>SSL/TLS</title>
+      <link>https://calvernaz.github.io/tags/ssl/tls/</link>
+      <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
+      <guid>https://calvernaz.github.io/tags/ssl/tls/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>TLS Certificates</title>
       <link>https://calvernaz.github.io/tags/tls-certificates/</link>
       <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
       <guid>https://calvernaz.github.io/tags/tls-certificates/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SSL/TLS</title>
-      <link>https://calvernaz.github.io/tags/ssl/tls/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://calvernaz.github.io/tags/ssl/tls/</guid>
       <description></description>
     </item>
   </channel>

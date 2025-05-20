@@ -4,12 +4,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Data-Only Containers in Docker: Flexibility in Data Management - weirdloop</title>
+    <title>Data-Only Containers in Docker: Flexibility in Data Management - Weirdloop</title>
 
     
     
-    <meta name="description" content="We will explore how DOCs (data-only containers), as a deliberate and thought-out approach, for managing data in Docker. DOCs are particularly interesting in scenarios requiring the distribution of static, unmodifiable data – such as packaged website content, tenanted configuration files, or standardized test datasets.
-DOCs offers a reliable and efficient method to manage data separation and portability in Docker to deploy immutable data resources across different stages of development since they can be versioned, shared, and reused across different environments." />
+    <meta name="description" content="We will explore how DOCs (data-only containers), as a deliberate and thought-out approach, for managing data in Docker.
+DOCs are particularly interesting in scenarios requiring the distribution of static, unmodifiable data – such as packaged website content,
+tenanted configuration files, or standardized test datasets.
+DOCs offers a reliable and efficient method to manage data separation and portability in Docker to deploy immutable
+data resources across different stages of development since they can be versioned, shared, and reused across different environments." />
     <meta name="author" content="" />
     
 
@@ -24,8 +27,7 @@ DOCs offers a reliable and efficient method to manage data separation and portab
         :root {
             --font-sans: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
         }
-    </style><link rel="stylesheet" href="/css/custom.css">
-</head>
+    </style></head>
 <body class="bg:fade-84@dark font:fade-16@dark font:sans">
     <nav class="w:full h:90 fixed bg:fade-84/.95@dark bg:white z:1000">
     <div class="
@@ -40,7 +42,7 @@ DOCs offers a reliable and efficient method to manage data separation and portab
         <div>
             <a href="/" class="mr-3 font:extralight">
               
-              weirdloop
+              Weirdloop
               
             </a>
         </div>
@@ -175,7 +177,7 @@ Anyway, so far so good, this is pretty much how data-only containers work, and i
 These secrets are critical for the operation of each tenant&rsquo;s instance of the application and must be securely managed to prevent unauthorized access.</p>
 <p>Here is a simple illustration of how a Kubernetes pod can be configured with a secrets mount volume, under <code>etc/secrets/</code>
 there are tenant-specific secrets that are accessible to the application container.</p>
-<p><img src="/static/k8s-secrets.png" alt="Kubernetes Pod with Secrets Volume" title="=x300"></p>
+<p><img src="/k8s-secrets.png" alt="Kubernetes Pod with Secrets Volume" title="Kubernetes Pod with Secrets Volume"></p>
 <h3 id="the-problem">The Problem</h3>
 <p>The problem arises when we need to have a consistent application approach across the different runtimes,
 docker in development and kubernetes, for example, in production.</p>
@@ -239,8 +241,8 @@ we should use external secrets backends like Hashicorp Vault or AWS Secrets Mana
 </div></article>
 <footer class="py:24">
     <div class="f:fade-30 f:14 mb:8"></div>
-</footer>
-</div>
+    <div class="f:fade-60 f:12">Theme <a class="f:bold" href="https://github.com/serkodev/holy" _target="_blank">Holy</a></div>
+</footer></div>
     </div>
 </body>
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development Tools on weirdloop</title>
+    <title>Development Tools on Weirdloop</title>
     <link>https://calvernaz.github.io/categories/development-tools/</link>
-    <description>Recent content in Development Tools on weirdloop</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Development Tools on Weirdloop</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>weirdloop</copyright>
     <lastBuildDate>Sat, 20 Jan 2024 06:50:50 +0000</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://calvernaz.github.io/posts/enhancing-fish-with-omf-packages/</link>
       <pubDate>Sat, 20 Jan 2024 06:50:50 +0000</pubDate>
       <guid>https://calvernaz.github.io/posts/enhancing-fish-with-omf-packages/</guid>
-      <description>One of the aspects I personally find most compelling about fish shell is its scripting ease. Unlike traditional shells, fish&amp;rsquo;s scripting language is straightforward, clean, and comes with features that encourage writing and maintaining scripts effortlessly. From its intelligent autosuggestions to the robust error handling, fish shell stands out as a powerful tool in the developer&amp;rsquo;s toolkit.&#xA;With the integration of the Oh My Fish (OMF) framework, users can further extend the shell&amp;rsquo;s functionality.</description>
+      <description>&lt;p&gt;One of the aspects I personally find most compelling about &lt;a href=&#34;https://fishshell.com&#34;&gt;fish shell&lt;/a&gt; is its scripting ease. Unlike traditional shells, fish&amp;rsquo;s scripting language is straightforward, clean, and comes with features that encourage writing and maintaining scripts effortlessly. From its intelligent autosuggestions to the robust error handling, &lt;a href=&#34;https://fishshell.com&#34;&gt;fish shell&lt;/a&gt; stands out as a powerful tool in the developer&amp;rsquo;s toolkit.&lt;/p&gt;&#xA;&lt;p&gt;With the integration of the &lt;a href=&#34;https://github.com/oh-my-fish/oh-my-fish&#34;&gt;Oh My Fish (OMF) framework&lt;/a&gt;, users can further extend the shell&amp;rsquo;s functionality. &lt;a href=&#34;https://github.com/oh-my-fish/oh-my-fish&#34;&gt;OMF&lt;/a&gt; offers a package management system, allowing users to install new packages, themes, and utilities, thus customizing their shell environment to their liking.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

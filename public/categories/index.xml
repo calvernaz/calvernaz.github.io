@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on weirdloop</title>
+    <title>Categories on Weirdloop</title>
     <link>https://calvernaz.github.io/categories/</link>
-    <description>Recent content in Categories on weirdloop</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Categories on Weirdloop</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>weirdloop</copyright>
-    <lastBuildDate>Sat, 20 Jan 2024 06:50:50 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Apr 2025 09:20:02 +0100</lastBuildDate>
     <atom:link href="https://calvernaz.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Career Development</title>
+      <link>https://calvernaz.github.io/categories/career-development/</link>
+      <pubDate>Sun, 27 Apr 2025 09:20:02 +0100</pubDate>
+      <guid>https://calvernaz.github.io/categories/career-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Compensation</title>
+      <link>https://calvernaz.github.io/categories/compensation/</link>
+      <pubDate>Sun, 27 Apr 2025 09:20:02 +0100</pubDate>
+      <guid>https://calvernaz.github.io/categories/compensation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance Reviews</title>
+      <link>https://calvernaz.github.io/categories/performance-reviews/</link>
+      <pubDate>Sun, 27 Apr 2025 09:20:02 +0100</pubDate>
+      <guid>https://calvernaz.github.io/categories/performance-reviews/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Promotion Cycles</title>
+      <link>https://calvernaz.github.io/categories/promotion-cycles/</link>
+      <pubDate>Sun, 27 Apr 2025 09:20:02 +0100</pubDate>
+      <guid>https://calvernaz.github.io/categories/promotion-cycles/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Development Tools</title>
       <link>https://calvernaz.github.io/categories/development-tools/</link>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Access Control Lists on weirdloop</title>
+    <title>Access Control Lists on Weirdloop</title>
     <link>https://calvernaz.github.io/tags/access-control-lists/</link>
-    <description>Recent content in Access Control Lists on weirdloop</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Access Control Lists on Weirdloop</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>weirdloop</copyright>
     <lastBuildDate>Tue, 16 Jan 2024 06:50:50 +0000</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://calvernaz.github.io/posts/mqtt_tls_acls/</link>
       <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
       <guid>https://calvernaz.github.io/posts/mqtt_tls_acls/</guid>
-      <description>This blog post delves into the sophisticated use of TLS certificates with Mosquitto, transcending their conventional role as encryption tools to serve as pivotal elements in client authentication and authorization.&#xA;We’ll explore how certificates, typically recognized for their role in securing communications, can be ingeniously repurposed for client identification through their Common Name (CN) attribute. This approach not only enhances the security posture of your MQTT ecosystem but also simplifies the authentication process.</description>
+      <description>&lt;p&gt;This blog post delves into the sophisticated use of TLS certificates with Mosquitto, transcending their conventional role as encryption tools to serve as pivotal elements in client authentication and authorization.&lt;/p&gt;&#xA;&lt;p&gt;We’ll explore how certificates, typically recognized for their role in securing communications, can be ingeniously repurposed for client identification through their Common Name (CN) attribute. This approach not only enhances the security posture of your MQTT ecosystem but also simplifies the authentication process. Furthermore, we will discuss how Access Control Lists (ACLs) can be seamlessly integrated with this identification mechanism, enabling precise control over who can publish or subscribe to specific topics. This synergy of encryption, identification, and access control not only fortifies the security of MQTT communications but also paves the way for more streamlined and manageable client permissions.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

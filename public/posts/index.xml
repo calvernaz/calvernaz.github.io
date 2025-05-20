@@ -1,41 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on weirdloop</title>
+    <title>Posts on Weirdloop</title>
     <link>https://calvernaz.github.io/posts/</link>
-    <description>Recent content in Posts on weirdloop</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Posts on Weirdloop</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>weirdloop</copyright>
-    <lastBuildDate>Mon, 05 Feb 2024 08:26:47 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Apr 2025 09:20:02 +0100</lastBuildDate>
     <atom:link href="https://calvernaz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Performance Reviews, Compensation and Promotion Cycles</title>
+      <link>https://calvernaz.github.io/posts/mastering-performance-reviews-compensation-promotion-cycles/</link>
+      <pubDate>Sun, 27 Apr 2025 09:20:02 +0100</pubDate>
+      <guid>https://calvernaz.github.io/posts/mastering-performance-reviews-compensation-promotion-cycles/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;“To get what you want, you have to deserve what you want. The world is not yet a crazy enough place to reward a whole bunch of undeserving people.” – Charlie Munger&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Engineers often bury themselves in code and the technical aspects of their work, which makes total sense, but every company&#xA;has a built-in rhythm for checking in on your performance, rewarding you with pay bumps or equity, and moving you up the ladder.&#xA;Think of these cycles (compensation reviews, stock refreshes, promotion windows) not as bureaucratic hoops,&#xA;but as regular checkpoints: &lt;strong&gt;do your goals still match what the company needs?&lt;/strong&gt; The company evolves and so do you.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Data-Only Containers in Docker: Flexibility in Data Management</title>
       <link>https://calvernaz.github.io/posts/data-only-containers-data-management/</link>
       <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
       <guid>https://calvernaz.github.io/posts/data-only-containers-data-management/</guid>
-      <description>We will explore how DOCs (data-only containers), as a deliberate and thought-out approach, for managing data in Docker. DOCs are particularly interesting in scenarios requiring the distribution of static, unmodifiable data – such as packaged website content, tenanted configuration files, or standardized test datasets.&#xA;DOCs offers a reliable and efficient method to manage data separation and portability in Docker to deploy immutable data resources across different stages of development since they can be versioned, shared, and reused across different environments.</description>
+      <description>&lt;p&gt;We will explore how DOCs (data-only containers), as a deliberate and thought-out approach, for managing data in Docker.&#xA;DOCs are particularly interesting in scenarios requiring the distribution of static, unmodifiable data – such as packaged &lt;strong&gt;website content&lt;/strong&gt;,&#xA;&lt;strong&gt;tenanted configuration files&lt;/strong&gt;, or &lt;strong&gt;standardized test datasets&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;DOCs offers a reliable and efficient method to manage &lt;em&gt;data separation&lt;/em&gt; and &lt;em&gt;portability&lt;/em&gt; in Docker to deploy immutable&#xA;data resources across different stages of development since they can be versioned, shared, and reused across different environments.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fish Shell: Creating and Sharing Packages with Oh My Fish</title>
       <link>https://calvernaz.github.io/posts/enhancing-fish-with-omf-packages/</link>
       <pubDate>Sat, 20 Jan 2024 06:50:50 +0000</pubDate>
       <guid>https://calvernaz.github.io/posts/enhancing-fish-with-omf-packages/</guid>
-      <description>One of the aspects I personally find most compelling about fish shell is its scripting ease. Unlike traditional shells, fish&amp;rsquo;s scripting language is straightforward, clean, and comes with features that encourage writing and maintaining scripts effortlessly. From its intelligent autosuggestions to the robust error handling, fish shell stands out as a powerful tool in the developer&amp;rsquo;s toolkit.&#xA;With the integration of the Oh My Fish (OMF) framework, users can further extend the shell&amp;rsquo;s functionality.</description>
+      <description>&lt;p&gt;One of the aspects I personally find most compelling about &lt;a href=&#34;https://fishshell.com&#34;&gt;fish shell&lt;/a&gt; is its scripting ease. Unlike traditional shells, fish&amp;rsquo;s scripting language is straightforward, clean, and comes with features that encourage writing and maintaining scripts effortlessly. From its intelligent autosuggestions to the robust error handling, &lt;a href=&#34;https://fishshell.com&#34;&gt;fish shell&lt;/a&gt; stands out as a powerful tool in the developer&amp;rsquo;s toolkit.&lt;/p&gt;&#xA;&lt;p&gt;With the integration of the &lt;a href=&#34;https://github.com/oh-my-fish/oh-my-fish&#34;&gt;Oh My Fish (OMF) framework&lt;/a&gt;, users can further extend the shell&amp;rsquo;s functionality. &lt;a href=&#34;https://github.com/oh-my-fish/oh-my-fish&#34;&gt;OMF&lt;/a&gt; offers a package management system, allowing users to install new packages, themes, and utilities, thus customizing their shell environment to their liking.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Eclipse Mosquitto: Leveraging Certificates for Encryption, Identification, and ACLs</title>
       <link>https://calvernaz.github.io/posts/mqtt_tls_acls/</link>
       <pubDate>Tue, 16 Jan 2024 06:50:50 +0000</pubDate>
       <guid>https://calvernaz.github.io/posts/mqtt_tls_acls/</guid>
-      <description>This blog post delves into the sophisticated use of TLS certificates with Mosquitto, transcending their conventional role as encryption tools to serve as pivotal elements in client authentication and authorization.&#xA;We’ll explore how certificates, typically recognized for their role in securing communications, can be ingeniously repurposed for client identification through their Common Name (CN) attribute. This approach not only enhances the security posture of your MQTT ecosystem but also simplifies the authentication process.</description>
+      <description>&lt;p&gt;This blog post delves into the sophisticated use of TLS certificates with Mosquitto, transcending their conventional role as encryption tools to serve as pivotal elements in client authentication and authorization.&lt;/p&gt;&#xA;&lt;p&gt;We’ll explore how certificates, typically recognized for their role in securing communications, can be ingeniously repurposed for client identification through their Common Name (CN) attribute. This approach not only enhances the security posture of your MQTT ecosystem but also simplifies the authentication process. Furthermore, we will discuss how Access Control Lists (ACLs) can be seamlessly integrated with this identification mechanism, enabling precise control over who can publish or subscribe to specific topics. This synergy of encryption, identification, and access control not only fortifies the security of MQTT communications but also paves the way for more streamlined and manageable client permissions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello, Again!</title>
       <link>https://calvernaz.github.io/posts/hello/</link>
       <pubDate>Tue, 26 Dec 2023 19:17:45 +0000</pubDate>
       <guid>https://calvernaz.github.io/posts/hello/</guid>
-      <description>Yes, hello, again! I&amp;rsquo;m trying one more time to get a blog running and keep it up to date, writing about things that interest me. Hopefully, this time will be different and won&amp;rsquo;t be abandoned after a few posts :)&#xA;def hello(): print(&amp;#39;Hello, Again!&amp;#39;) </description>
+      <description>&lt;p&gt;Yes, hello, again!&#xA;I&amp;rsquo;m trying one more time to get a blog running and keep it up to date, writing about things that interest me.&#xA;Hopefully, this time will be different and won&amp;rsquo;t be abandoned after a few posts :)&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;():&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Hello, Again!&amp;#39;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

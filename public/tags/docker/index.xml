@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docker on weirdloop</title>
+    <title>Docker on Weirdloop</title>
     <link>https://calvernaz.github.io/tags/docker/</link>
-    <description>Recent content in Docker on weirdloop</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Docker on Weirdloop</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>weirdloop</copyright>
     <lastBuildDate>Mon, 05 Feb 2024 08:26:47 +0000</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://calvernaz.github.io/posts/data-only-containers-data-management/</link>
       <pubDate>Mon, 05 Feb 2024 08:26:47 +0000</pubDate>
       <guid>https://calvernaz.github.io/posts/data-only-containers-data-management/</guid>
-      <description>We will explore how DOCs (data-only containers), as a deliberate and thought-out approach, for managing data in Docker. DOCs are particularly interesting in scenarios requiring the distribution of static, unmodifiable data – such as packaged website content, tenanted configuration files, or standardized test datasets.&#xA;DOCs offers a reliable and efficient method to manage data separation and portability in Docker to deploy immutable data resources across different stages of development since they can be versioned, shared, and reused across different environments.</description>
+      <description>&lt;p&gt;We will explore how DOCs (data-only containers), as a deliberate and thought-out approach, for managing data in Docker.&#xA;DOCs are particularly interesting in scenarios requiring the distribution of static, unmodifiable data – such as packaged &lt;strong&gt;website content&lt;/strong&gt;,&#xA;&lt;strong&gt;tenanted configuration files&lt;/strong&gt;, or &lt;strong&gt;standardized test datasets&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;DOCs offers a reliable and efficient method to manage &lt;em&gt;data separation&lt;/em&gt; and &lt;em&gt;portability&lt;/em&gt; in Docker to deploy immutable&#xA;data resources across different stages of development since they can be versioned, shared, and reused across different environments.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
